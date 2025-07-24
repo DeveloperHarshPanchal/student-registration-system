@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Title -->
+    <title>Student Registration System</title>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon for Browser Tab -->
+    <link rel="icon" href="images/logo1.jpg" type="image/png" />
+
+    <!-- Google Fonts: Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Registration Form Section -->
+      <div class="form-wrapper animate">
+        <form id="studentForm" class="form-card">
+          <h2 class="form-title">
+            <i class="fas fa-user-plus"></i> Register New Student
+          </h2>
+
+          <!-- Input: Full Name -->
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" placeholder="Full Name" required />
+          </div>
+
+          <!-- Input: Student ID -->
+          <div class="input-group">
+            <i class="fas fa-id-card"></i>
+            <input
+              type="number"
+              id="studentId"
+              placeholder="Student ID"
+              required
+            />
+          </div>
+
+          <!-- Input: Email -->
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email ID" required />
+          </div>
+
+          <!-- Input: Contact Number -->
+          <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" id="contact" placeholder="Contact No." required />
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="register-btn">
+            <i class="fas fa-paper-plane"></i> Register
+          </button>
+        </form>
+      </div>
+
+      <!-- Registered Students Section -->
+      <section id="studentList" class="students-section animate">
+        <h2><i class="fas fa-users"></i> Registered Students</h2>
+
+        <!-- Scrollable Table for Displaying Students -->
+        <div class="scrollable">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th></th>
+                <!-- Column for Edit/Delete buttons -->
+              </tr>
+            </thead>
+            <tbody id="recordTable">
+              <!-- Default Row Shown When No Students Are Registered -->
+              <tr>
+                <td colspan="5" style="text-align: center">
+                  No students registered yet.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- JavaScript Logic File -->
+    <script src="script.js"></script>
+  </body>
+</html>

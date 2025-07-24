@@ -1,0 +1,301 @@
+/* --------------------
+   Global Body Styles
+-------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+
+  /* Dynamic background gradient with animation */
+  background: linear-gradient(-45deg, #00bcd4, #2196f3, #e91e63, #9c27b0);
+  background-size: 400% 400%;
+  animation: gradientShift 5s ease infinite;
+
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* --------------------
+   Keyframe Animations
+-------------------- */
+
+/* Fade In Effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide Up Animation for Elements */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade Out (for alert messages) */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Shifting Gradient Background */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* --------------------
+   Wrapper
+-------------------- */
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* --------------------
+   Form Section Styles
+-------------------- */
+.form-wrapper {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Title */
+.form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2196f3;
+}
+
+/* Input Group Styling */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+}
+
+/* Icon in Input */
+.input-group i {
+  margin-right: 10px;
+  color: #2196f3;
+}
+
+/* Text Inputs */
+.input-group input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  background: transparent;
+  padding: 10px 5px;
+}
+
+/* Submit Button Styling */
+.register-btn {
+  background-color: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.register-btn:hover {
+  background-color: #d81b60;
+}
+
+/* --------------------
+   Registered Students Section
+-------------------- */
+.students-section {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: slideUp 1s ease-in-out;
+}
+
+/* Section Title */
+.students-section h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #2196f3;
+  text-align: center;
+}
+
+/* Scrollable Table Container */
+.scrollable {
+  overflow-x: auto;
+  max-height: 300px;
+  border-radius: 8px;
+}
+
+/* Table Structure */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: #2196f3;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Table Row Hover */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Edit/Delete Buttons */
+td button {
+  margin-right: 5px;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: #fff;
+}
+
+/* --------------------
+   Alert Notification Styles
+-------------------- */
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: white;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeOut 3s ease-in-out forwards;
+}
+
+/* Success Alert */
+.alert.success {
+  background-color: #4caf50;
+}
+
+/* Error Alert */
+.alert.error {
+  background-color: #f44336;
+}
+
+/* --------------------
+   Scrollbar Customization
+-------------------- */
+.scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: #2196f3;
+  border-radius: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #1976d2;
+}
+
+/* --------------------
+   Responsive Design
+-------------------- */
+@media screen and (max-width: 600px) {
+  .form-title,
+  .students-section h2 {
+    font-size: 18px;
+  }
+
+  .register-btn {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    font-size: 14px;
+  }
+
+  td button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .form-wrapper,
+  .students-section {
+    padding: 15px;
+  }
+
+  .wrapper {
+    padding: 10px;
+  }
+}
